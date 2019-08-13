@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Elements - Landed by HTML5 UP</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="{% static 'js/jquery.min.js' %}"></script>
+		<script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
+		<script src="{% static 'js/jquery.dropotron.min.js' %}"></script>
+		<script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
+		<script src="{% static 'js/skel.min.js' %}"></script>
+		<script src="{% static 'js/skel-layers.min.js' %}"></script>
+		<script src="{% static 'js/init.js' %}"></script>
+		<link rel="stylesheet" href="{% static 'css/skel.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/style-xlarge.css' %}" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+
+	<body>
+
+		<div id="main" class="wrapper style1">
+				<div class="container">
+					<form method="post">
+					        {% csrf_token %}
+						<section>
+							<header class="major">
+							<h2>{{ tool.name }}</h2>
+							</header>
+							<h4>Daily:{{ tool.daycost }}</h4>
+							<h4>Weekly:{{ tool.weekcost }}</h4>
+							<h4>Monthly:{{ tool.monthcost }}</h4>
+								<div class="row uniform 50%">
+									<div class="6u 12u$(xsmall)">
+										<input type="text" name="quantity" id="id_quantity" value="" placeholder="Quantity" />
+									</div>
+									<div class="6u$ 12u$(xsmall)">
+										<input type="text" name="duration" id="id_duration" value="" placeholder="for a period of" />
+									</div>
+									<div class="4u 12u$(medium)">
+										<input type="radio" value="1" id="priority-low" name="dwm" checked>
+										<label for="priority-low">Day(s)</label>
+									</div>
+									<div class="4u 12u$(medium)">
+										<input type="radio" value="2" id="priority-normal" name="dwm">
+										<label for="priority-normal">Week(s)</label>
+									</div>
+									<div class="4u$ 12u$(medium)">
+										<input type="radio" value="3" id="priority-high" name="dwm">
+										<label for="priority-high">Month(s)</label>
+									</div>
+									<div class="3u 6u(medium) 12u$(xsmall)">
+									<ul class="actions vertical">
+										<!-- <li><a href="" class="button special fit">Add to Cart</a></li> -->
+										<button type="submit" class="button special fit" style="font-size:18px">Add to Cart</button>
+									</ul>
+									</div>
+								</div>
+						</section>
+					</form>
+			</div>
+		</div>
+		<footer id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Untitled. All rights reserved.</li><li>Design: Rent IT</li>
+				</ul>
+			</footer>
+
+	</body>
+</html>

@@ -1,0 +1,27 @@
+{% if request.user.is_staff %}
+        <a href="/insert">Insert</a>
+{% endif %}
+<table border="1">
+        <tr>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Day cost</th>
+                <th>Week cost</th>
+                <th>Month cost</th>
+                <th>Operation</th>
+        </tr>
+        {% for tool in tools %}
+                <tr>
+                        <td>{{tool.name}}</td>
+                        <td>{{tool.quantity}}</td>
+                        <td>{{tool.daycost}}</td>
+                        <td>{{tool.weekcost}}</td>
+                        <td>{{tool.monthcost}}</td>
+                        {% if request.user.is_staff %}
+                                <td><a href="/update/{{tool.id}}">Update</a>,<a href="/delete/{{tool.id}}">Delete</a></td>
+                        {% else %}
+                                <td><a href="/rent/{{tool.id}}">Rent</a></td>
+                        {% endif %}
+                </tr>
+        {% endfor %}
+</table>

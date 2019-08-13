@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Insert Tools | Rent IT</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="{% static 'js/jquery.min.js' %}"></script>
+		<script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
+		<script src="{% static 'js/jquery.dropotron.min.js' %}"></script>
+		<script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
+		<script src="{% static 'js/skel.min.js' %}"></script>
+		<script src="{% static 'js/skel-layers.min.js' %}"></script>
+		<script src="{% static 'js/init.js' %}"></script>
+		<link rel="stylesheet" href="{% static 'css/skel.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/style-xlarge.css' %}" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+
+
+			<div id="main" class="wrapper style1">
+				<div class="container">
+					<header class="major">
+						<h2>Insert your tools from here!</h2>
+					</header>
+						<section>
+							<form method="post" action="#">
+								{% csrf_token %}
+								<div class="row uniform 50%">
+									<div class="6u 12u$(xsmall)">
+										<!-- <input type="text" name="tooltype" id="id_tooltype" value="" placeholder="Tool Type" /> -->
+										<div class="select-wrapper">
+										<select name="tooltype" id="tooltype">
+										  <option value="">- Tool Type -</option>
+										  <option value="1">Power Tools</option>
+										  <option value="2">Outdoor Tools</option>
+										  <option value="3">Hand Tools</option>
+										</select>
+										</div>
+									</div>
+									<div class="6u$ 12u$(xsmall)">
+										<!-- <input type="text" name="name" id="id_name" value="" placeholder="Tool Name" /> -->
+										<select name="name" id="name">
+											<option value="">- Tool Name -</option>
+										</select>
+									</div>
+									<div class="6u 12u$(xsmall)">
+										<input type="text" name="quantity" id="quantity" value="" placeholder="Quantity" />
+									</div>
+									<div class="6u$ 12u$(xsmall)">
+										<input type="text" name="daycost" id="daycost" value="" placeholder="Per Day Cost" />
+									</div>
+									<div class="6u 12u$(xsmall)">
+										<input type="text" name="weekcost" id="weekcost" value="" placeholder="Per Week Cost" />
+									</div>
+									<div class="6u$ 12u$(xsmall)">
+										<input type="text" name="monthcost" id="monthcost" value="" placeholder="Per Month Cost" />
+									</div>
+										<ul class="actions">
+									<!-- <li><a href="all_tools.html" class="button special icon fa-key">Insert</a></li> -->
+									<li><button class="button special icon fa-key" style="font-size:18px" type="submit">Insert</button></li>
+								</ul>
+								</div>
+							</form>
+						</section>
+									<hr/>
+
+				</div>
+			</div>
+		</body>
+		<script type="text/javascript">
+			var o = []
+			var tooltype = 0
+			function changevalues(){
+			    $("#name").empty();
+    			    tooltype = $('#tooltype').find(":selected").val();
+    			    if(tooltype == 1){
+    				    o = [
+    					    new Option("Air compressor", "Air compressor"),
+    					    new Option("Breakers", "Breakers"),
+    					    new Option("Drills & Drivers", "Drills & Drivers"),
+    					    new Option("Saw", "Saw"),
+    					    new Option("Paint Sprayer", "Paint Sprayer"),
+    					    new Option("Planers", "Planers")
+    			    	]
+    			    }else if(tooltype == 2){
+    				    o = [
+    					    new Option("Augers", "Augers"),
+    					    new Option("Chainsaws", "Chainsaws"),
+    					    new Option("Lawn Mowers", "Lawn Mowers"),
+    					    new Option("Pressure Washers", "Pressure Washers"),
+    					    new Option("Generators", "Generators"),
+					    new Option("Cultivators", "Cultivators")
+    				    ]
+    			    }else if(tooltype == 0){
+				    o = [ new Option("- Tool Name -","- Tool Name -") ]
+			    }else{
+    				    o = [
+    					    new Option("Wrenches", "Wrenches"),
+    					    new Option("Spanners", "Spanners"),
+    					    new Option("Screwdrivers", "Screwdrivers"),
+    					    new Option("Pullers & Scrappers", "Pullers & Scrappers"),
+    					    new Option("Chisels", "Chisels"),
+					    new Option("Riveters", "Riveters")
+    				    ]
+    			    }
+    			    o.forEach(function(item) {
+    				$("#name").append(item);
+    			    });
+			}
+		        // $(document).ready(changevalues());
+		        $("#tooltype").change(function(e){changevalues()});
+		</script>
+		</html>

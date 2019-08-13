@@ -1,0 +1,126 @@
+{% load static %}
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Rent IT</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<script src="{% static 'js/jquery.min.js' %}"></script>
+		<script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
+		<script src="{% static 'js/jquery.dropotron.min.js' %}"></script>
+		<script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
+		<script src="{% static 'js/skel.min.js' %}"></script>
+		<script src="{% static 'js/skel-layers.min.js' %}"></script>
+		<script src="{% static 'js/init.js' %}"></script>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/skel.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'css/style-xlarge.css' %}" />
+
+	</head>
+	<body class="landing">
+
+		<!-- Header -->
+			<header id="header">
+				<h1 id="logo"><a href="#">Rent IT</a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="">Tools</a>
+							<ul>
+								<li><a href="/tools/1">Power Tools</a></li>
+								<li><a href="/tools/2">Outdoor Tools</a></li>
+								<li><a href="/tools/3">Hand Tools</a></li>
+							</ul>
+						</li>
+						<li><a href="/login" class="button special">Admin Log In</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="content">
+					<header>
+						<h2>The future has landed</h2>
+						<p>And there are no hoverboards or flying cars.<br />
+						Just apps. Lots of mother flipping apps.</p>
+					</header>
+					<span class="image"><img src="{% static 'img/pic01.jpg' %}" alt="" /></span>
+				</div>
+				<a href="#two" class="goto-next scrolly">Next</a>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="spotlight style2 right">
+				<span class="image fit main"><img src="{% static 'img/pic03.jpg' %}" alt="" /></span>
+				<div class="content">
+					<header>
+						<h2>POWER TOOLS</h2>
+						<p>A power tool is a tool that is actuated by an additional power source and mechanism other than the solely manual labor used with hand tools.</p>
+					</header>
+					<p>Power tools are used in industry, in construction, in the garden, for housework tasks such as cooking, cleaning, and around the house for purposes of driving (fasteners), drilling, cutting, shaping, sanding, grinding, routing, polishing, painting, heating and more.</p>
+					<ul class="actions">
+						<li><a href="/tools/1" class="button">Learn More</a></li>
+					</ul>
+				</div>
+				<a href="#three" class="goto-next scrolly">Next</a>
+			</section>
+
+		<!-- Three -->
+			<section id="three" class="spotlight style3 left">
+				<span class="image fit main bottom"><img src="{% static 'img/pic04.jpg' %}" alt="" /></span>
+				<div class="content">
+					<header>
+						<h2>OUTDOOR TOOLS</h2>
+						<p>Outdoor tools can also be hand tools and power tools.</p>
+					</header>
+					<p>A outdoor tool is any one of many tools made for gardens and gardening and overlaps with the range of tools made for agriculture and horticulture. Outdoor tools such as garden forks, pruning shears, and rakes are additional forms of hand tools.</p>
+					<ul class="actions">
+						<li><a href="/tools/2" class="button">Learn More</a></li>
+					</ul>
+				</div>
+				<a href="#four" class="goto-next scrolly">Next</a>
+			</section>
+
+
+			<!-- Two -->
+			<section id="four" class="spotlight style2 right">
+				<span class="image fit main"><img src="{% static 'img/pic03.jpg' %}" alt="" /></span>
+				<div class="content">
+					<header>
+						<h2>HAND TOOLS</h2>
+						<p>A hand tool is any tool that is powered by hand rather than a motor.</p>
+					</header>
+					<p>Categories of hand tools include wrenches, pliers, cutters, files, striking tools, struck or hammered tools, screwdrivers, vises, clamps, snips, saws, drills and knives. Portable power tools are not hand tools.</p>
+					<ul class="actions">
+						<li><a href="/tools/3" class="button">Learn More</a></li>
+					</ul>
+				</div>
+				<a href="#five" class="goto-next scrolly">Next</a>
+			</section>
+
+
+			<!-- <section id="five" class="wrapper style1 special fade-up">
+						<ul class="actions">
+							<li><a href="#" class="button">GO TO TOP</a></li>
+						</ul>
+			</section> -->
+
+
+		<footer id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Untitled. All rights reserved.</li><li>Design: Rent IT</li>
+				</ul>
+			</footer>
+
+	</body>
+</html>

@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Power Tools | Rent IT</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="{% static 'js/jquery.min.js' %}"></script>
+		<script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
+		<script src="{% static 'js/jquery.dropotron.min.js' %}"></script>
+		<script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
+		<script src="{% static 'js/skel.min.js' %}"></script>
+		<script src="{% static 'js/skel-layers.min.js' %}"></script>
+		<script src="{% static 'js/init.js' %}"></script>
+		<link rel="stylesheet" href="{% static 'css/skel.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/style-xlarge.css' %}" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+
+			<section class="wrapper style1 special fade-up">
+				<div class="container">
+					<header class="major">
+						<h3><a href="/" class="button special">
+							{% if tools.0.tooltype == 1 %}
+							POWER TOOLS</a></h3>
+							{% elif tools.0.tooltype == 2 %}
+							OUTDOOR TOOLS</a></h3>
+							{% elif tools.0.tooltype == 3 %}
+							HAND TOOLS</a></h3>
+							{% else %}
+							Contact admin</a></h3>
+							{% endif %}
+					</header>
+					{% if not tools %}
+					<h2>Ask admin to insert tools</h2>
+					{% else %}
+					<div class="box alt">
+						<div class="row uniform">
+							{% for tool in tools %}
+								<section class="4u 6u(medium) 12u$(xsmall)">
+									<span class="icon alt major fa-area-chart"></span>
+									<h3><a href="/rent/{{tool.id}}">{{ tool.name }}</a></h3>
+								</section>
+							{% endfor %}
+						</div>
+					</div>
+					{% endif %}
+	</body>
+</html>

@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Elements - Landed by HTML5 UP</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="{% static 'js/jquery.min.js' %}"></script>
+		<script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
+		<script src="{% static 'js/jquery.dropotron.min.js' %}"></script>
+		<script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
+		<script src="{% static 'js/skel.min.js' %}"></script>
+		<script src="{% static 'js/skel-layers.min.js' %}"></script>
+		<script src="{% static 'js/init.js' %}"></script>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/skel.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'css/style-xlarge.css' %}" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<style>
+	.table-wrapper table td{
+		text-align: center;
+	}
+	</style>
+	<body>
+
+
+			<div id="main" class="wrapper style1">
+				<div class="container">
+					<header class="major">
+						<h2>Review Your Quote Request</h2>
+						<p>Please review your quote request to be certain it is correct.
+To change the quantity on any item, enter the new value and press the Update Quantity button.
+To remove an item, set the quantity to zero and press the Update Quantity button. </p>
+					</header>
+
+		<!-- Table -->
+						<section>
+							<div class="table-wrapper">
+								<form method="post">
+								        {% csrf_token %}
+								<table>
+									<thead>
+										<tr>
+											<th>Quantity</th>
+											<th>Item Description</th>
+											<th>Rental Duration</th>
+											<th>Price</th>
+										</tr>
+
+									</thead>
+
+									<tbody>
+										{% for entry in entries %}
+											<tr>
+												<td>
+													<input style="text-align: center;transition: border-color 0.2s ease-in-out;background: transparent;border-radius: 4px;border: solid 1px rgba(255, 255, 255, 0.3);color: inherit;display: block;
+    padding: 5px;outline: 0;text-decoration: none;width: 20%;margin-left:40%" value="{{entry.quantity}}" name="{{entry.id}}" id="{{entry.id}}"></input>
+												</td>
+												<td>{{ entry.item.name }}</td>
+												<td>{{ entry.duration }}</td>
+												<td>{{ entry.cost }}</td>
+											</tr>
+										{% endfor %}
+									</tbody>
+									<tfoot>
+										<tr>
+											<td>Total Price:</td>
+											<td colspan="2"></td>
+											<td>{{ cost }}</td>
+										</tr>
+									</tfoot>
+								</table>
+								<ul class="actions">
+								<li><button type="submit" class="button special icon fa-plus-square" style="font-size:18px">Update Quantity</button></li>
+								<li><a href="/" class="button icon fa-shopping-cart">Continue Shopping</a></li>
+								<li><a href="/checkout" class="button special icon fa-home" style="font-size:18px">Check Out</a></li>
+							</form>
+							</ul>
+							</div>
+						</section>
+					</div>
+				</div>
+				<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Untitled. All rights reserved.</li><li>Design: Rent IT</li>
+				</ul>
+			</footer>
+			</body>
+		</html>
