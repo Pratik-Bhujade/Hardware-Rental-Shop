@@ -1,6 +1,6 @@
 autopep8==1.4.3
 Babel==2.6.0
-Django==1.11.18
+Django==1.11.23
 django-phonenumber-field==2.2.0
 migrations==0.1.1
 phonenumbers==8.10.7
