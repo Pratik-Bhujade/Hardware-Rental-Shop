@@ -14,17 +14,15 @@ $ cd [path_to_project]
 
     $ python3 manage.py runserver
 
-Then, you can open the URL http://127.0.0.1:8000/ in your web browser.
-
-3. To access Module go to [localhost:8000][1]
-
-4. To access Admin console go to [localhost:8000/admin][2]
-
-    For Admin credentials are
+    Then, you can open the URL [http://127.0.0.1:8000/][1] in your web browser.
     
-    Username : admin@gmail.com
-    
-    Password : ioioioio
+    To access Admin console go to [http://127.0.0.1:8000/][2]
 
-[1]: http://localhost:8000/
-[2]: http://localhost:8000/admin
+    Admin credentials are
+    
+        Username : admin@gmail.com
+
+        Password : ioioioio
+
+[1]: http://127.0.0.1:8000/
+[2]: http://127.0.0.1:8000/admin
