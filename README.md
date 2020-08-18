@@ -15,7 +15,7 @@ $ cd [path_to_project]
     $ python3 manage.py runserver
 
 Then, you can open the URL http://127.0.0.1:8000/ in your web browser.
-``
+
 3. To access Module go to [localhost:8000][1]
 
 4. To access Admin console go to [localhost:8000/admin][2]
