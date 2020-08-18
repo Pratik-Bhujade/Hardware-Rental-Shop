@@ -25,6 +25,12 @@ framework execute the follow command:
 
 ::
 
+    $ sudo pip install -r requirements.txt
+
+And later followed by:
+
+::
+
     $ python3 manage.py migrate
 
 At which point you should see:
