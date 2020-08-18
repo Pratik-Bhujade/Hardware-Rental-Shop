@@ -1,4 +1,5 @@
-#Hardware Rental Shop
+Hardware Rental Shop
+=====================
 
 Run application
 ===============
