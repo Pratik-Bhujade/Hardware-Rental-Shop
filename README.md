@@ -1,10 +1,15 @@
 Hardware Rental Shop
 =====================
 
-Run application
-===============
+This application enables you to rent hardware items from a local stores for a desired period of time via an online portal. This profit both the parties I.e customer and the shop owner. Customer gets to use the hardware without paying full amount of the product and then after the work is done he/she can return it to store and also for shop keeper it’s a win situation because he can again lend that item to any borrower and can gain profit from it. This project was built using Django 1 .11 and templates were written using HTML and CSS was used for styling the html sheets accordingly.
+
+
+
 
 Steps to execute
+===============
+
+
 
 1. Open desired project directory
     ```shell
@@ -16,7 +21,7 @@ Steps to execute
     $ pip install -r requirements.txt
     ```
 
-3. After which you can run::
+3. To start localhost
     ```shell
     $ python manage.py runserver
     ```
