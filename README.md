@@ -1,7 +1,7 @@
 Hardware Rental Shop
 =====================
 
-This application enables you to rent hardware items from a local stores for a desired period of time via an online portal. This profit both the parties I.e customer and the shop owner. Customer gets to use the hardware without paying full amount of the product and then after the work is done he/she can return it to store and also for shop keeper it’s a win situation because he can again lend that item to any borrower and can gain profit from it. This project was built using Django 1 .11 and templates were written using HTML and CSS was used for styling the html sheets accordingly.
+This application enables you to rent hardware items from a local stores for a desired period of time via an online portal. This profit both the parties I.e customer and the shop owner. This project was built using Django 1 .11 and templates were written using HTML and CSS was used for styling the html sheets accordingly.
 
 
 
@@ -27,11 +27,11 @@ Steps to execute
     ```
     Then, you can open the URL [http://127.0.0.1:8000/][1] in your web browser.
 
-    Admin credentials are
+   Website Login Credentials :
     
-        Username : admin@gmail.com
+        Username - admin@gmail.com
 
-        Password : ioioioio
+        Password - ioioioio
 
 [1]: http://127.0.0.1:8000/
 
